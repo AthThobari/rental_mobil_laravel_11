@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('mobil_id')->constrained('mobils')->onDelete('cascade');
+            $table->foreignIdFor(User::class);
+            $table->foreignIdFor(Mobil::class);
             $table->string('nama')->nullable();
             $table->string('ponsel')->nullable();
             $table->string('alamat')->nullable();
