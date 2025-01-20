@@ -14,10 +14,10 @@ class Transaksi extends Model
 
     public function user(): BelongsTo
     {
-        return $this->belongsTo(user::class);
+        return $this->belongsTo(User::class);
     }
     public function mobil(): BelongsTo
     {
-        return $this->belongsTo(mobil::class);
+        return $this->belongsTo(Mobil::class);
     }
 }
